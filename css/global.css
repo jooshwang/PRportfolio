@@ -55,7 +55,32 @@ body {font-family: 'Roboto';}
 #wrap section .box_text .detail ul {font-weight: 700; font-size: 20px;}
 #wrap section .box_text .detail ul li {margin-bottom: 5%;}
 /* #wrap section .box_text .detail .btn_box ul {display: flex; flex-direction: row;} */
-#wrap section .box_text .detail .btn_box ul li {display: inline-block; text-align: center; padding: 3% 2%; border: 3px solid black; margin-right: 2%;}
+#wrap section .box_text .detail .btn_box ul li {
+    display: inline-block;font-size: 16px; text-align: center; padding: 3% 2%; border: 3px solid black; margin-right: 2%; position: relative;
+    z-index: 1;
+}
+#wrap section .box_text .detail .btn_box ul li::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    transition: transform 300ms ease-in-out;
+	transform:scaleX(0);
+    z-index: -1;
+}
+
+#wrap section .box_text .detail .btn_box ul li:hover:before{
+    transform: scaleX(1); }
+
+#wrap section .box_text .detail .btn_box ul li:hover a {
+    color: white;
+    font-weight: 500;
+}
+
 #wrap section .box_text .detail .btn_box ul li a {text-decoration: none; color: black; width: 100%; display: block;}
 #wrap section:not(:first-of-type) .portfolio_img {padding-top: 2%; width: 50%;}
 #wrap section:not(:first-of-type) .portfolio_img img {box-shadow: 30px 20px 40px rgba(0, 0, 0, 0.5); width: 100%;}
