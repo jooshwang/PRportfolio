@@ -66,9 +66,16 @@ body {font-family: 'Roboto';}
 #wrap #about_me .intro_txt ul li ol li span {float: left; width: 21%; display: block;}
 #wrap #about_me .intro_txt ul li ol li .bar {text-align: right;float: right;position: relative;background-color: #3f3f3f;width: 75%;}
 #wrap #about_me .intro_txt ul li ol li .bar mark {background-color: #f8c208;}
-#wrap #about_me .intro_txt ul li ol li .bar .in_box {position: absolute;top: 0;left: 0;background-color: white;width: 0%;height: 100%;transition: all 5s;}
-#wrap #about_me .intro_txt ul li ol li:first-of-type:hover .bar .in_box {width: 70%;}
-#wrap #about_me .intro_txt ul li ol li:nth-of-type(2):hover .bar .in_box,
-#wrap #about_me .intro_txt ul li ol li:nth-of-type(3):hover .bar .in_box,
-#wrap #about_me .intro_txt ul li ol li:nth-of-type(4):hover .bar .in_box {width: 80%;}
-#wrap #about_me .intro_txt ul li ol li:last-of-type:hover .bar .in_box {width: 60%;}
+#wrap #about_me .intro_txt ul li ol li .bar .in_box {position: absolute;top: 0;left: 0;background-color: white;width: 0%;height: 100%;transition: all 5s;
+    
+    animation-duration: 3s;
+}
+#wrap #about_me .intro_txt ul li ol li:first-of-type .bar .in_box {width: 70%; animation-name: fadeIn2;}
+#wrap #about_me .intro_txt ul li ol li:nth-of-type(2) .bar .in_box,
+#wrap #about_me .intro_txt ul li ol li:nth-of-type(3) .bar .in_box,
+#wrap #about_me .intro_txt ul li ol li:nth-of-type(4) .bar .in_box {width: 80%; animation-name: fadeIn;}
+#wrap #about_me .intro_txt ul li ol li:last-of-type .bar .in_box {width: 60%; animation-name: fadeIn3;}
+
+@keyframes fadeIn {from{width: 0%;} to{width: 80%;}}
+@keyframes fadeIn2 {from{width: 0%;} to{width: 70%;}}
+@keyframes fadeIn3 {from{width: 0%;} to{width: 60%;}}
