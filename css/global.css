@@ -1,0 +1,74 @@
+body {font-family: 'Roboto';}
+
+#wrap header nav ul li:nth-child(3),
+#about_me .box_text p,
+#greenpeace .box_text ul li,
+#drama .box_text h3 {font-family: 'Noto Sans KR';}
+
+#wrap {width: 100%; position: relative; box-sizing: border-box;}
+#wrap header {position: fixed; width: 45.5%;max-width: 820px;margin: 0 auto; left: 5%; top: 10%; z-index: 100; }
+
+#wrap header nav label.btn_icon {cursor: pointer;}
+#wrap header nav label.btn_icon span {display: block; width: 40px; height: 4px; background-color: black;}
+#wrap header nav label.btn_icon span::before,
+#wrap header nav label.btn_icon span::after {content: ''; display: block;width: 25px; height: 4px; background-color: black;}
+#wrap header nav label.btn_icon span::before {transform: translateY(27px);}
+#wrap header nav label.btn_icon span::after {transform: translateY(10px);}
+
+#wrap header nav {width: 45.5%;}
+#wrap header nav ul {width: 42%;background-color: rgba(0, 0, 0, 0.7);transition: all .5s;position: fixed; top: 6%; left: -500%; padding: 5% 0 2% 5%; box-sizing: border-box;}
+#wrap header nav input[type="checkbox"] {display: none;}
+#wrap header nav input[id="btn_icon"]:checked + label.btn_icon {z-index: 100;}
+#wrap header nav input[id="btn_icon"]:checked + label.btn_icon + ul {left: 3%; z-index: -1;}
+#wrap header nav input[id="btn_icon"]:checked + label.btn_icon span,
+#wrap header nav input[id="btn_icon"]:checked + label.btn_icon span::before,
+#wrap header nav input[id="btn_icon"]:checked + label.btn_icon span::after {background-color: white;}
+#wrap header nav ul li {margin-bottom: 10%;}
+#wrap header nav ul li a {text-decoration: none;color: white;font-size: 50px;}
+#wrap header h1 {padding-top: 20%; font-size: 30px;font-weight: 400;}
+
+#wrap section {height: 100vh; padding: 3%; box-sizing: border-box; display: flex; flex-direction: row; justify-content: space-between;}
+#wrap section .box_text {width: 45%; box-sizing: border-box; padding-left: 15%; position: relative; background-color: rgba(0, 0, 0, 0.3);}
+#wrap section .box_text h2 {font-weight: 400; font-size: 30px; position: absolute; top: 5%;}
+#wrap section .box_text h2::after {content: ''; display: inline-block; width: 50px; border-top: 3px solid black; padding-bottom: 6px;}
+#wrap section:not(:first-of-type) .box_text .detail {bottom: 10%;position: absolute;}
+#wrap #about_me .box_text .detail {position: absolute; bottom: 20%;}
+#wrap section .box_text .detail h3 {font-weight: 900; font-size: 70px; margin-bottom: 5%;}
+#wrap #about_me {background-color: #f8c208;}
+#wrap #about_me .box_text .detail p {font-size: 25px;}
+#wrap #about_me .intro_txt {width: 50%;}
+#wrap #about_me .intro_txt ul {display: flex;flex-direction: row;flex-wrap: wrap; padding-top: 25%;}
+#wrap #about_me .intro_txt ul li {width: 49%; margin-bottom: 5%;}
+#wrap #about_me .intro_txt ul li:nth-child(n+1) {margin-right: 1%;}
+#wrap #about_me .intro_txt ul li h4 {border-bottom: 3px solid black;margin-bottom: 3%; font-size: 25px; padding-bottom: 2%;}
+#wrap #about_me .intro_txt ul > li > span {display: block;margin-bottom: 2%; font-size: 25px; font-weight: 500;}
+
+#wrap #greenpeace {background-color: #566912;}
+
+#wrap #drama {background-color: #a2b4d7;}
+
+#wrap #banilaco {background-color: #f39faa;}
+
+#wrap #thankU {background-color: #8f8f8f;}
+
+#wrap section .box_text .detail span {display: block; font-weight: 700; font-size: 35px; margin-bottom: 5%;}
+#wrap section .box_text .detail ul {font-weight: 700; font-size: 20px;}
+#wrap section .box_text .detail ul li {margin-bottom: 5%;}
+/* #wrap section .box_text .detail .btn_box ul {display: flex; flex-direction: row;} */
+#wrap section .box_text .detail .btn_box ul li {display: inline-block; text-align: center; padding: 3% 2%; border: 3px solid black; margin-right: 2%;}
+#wrap section .box_text .detail .btn_box ul li a {text-decoration: none; color: black; width: 100%; display: block;}
+#wrap section:not(:first-of-type) .portfolio_img {padding-top: 2%; width: 50%;}
+#wrap section:not(:first-of-type) .portfolio_img img {box-shadow: 30px 20px 40px rgba(0, 0, 0, 0.5); width: 100%;}
+
+#wrap #about_me .intro_txt ul li ol::after {content: ''; display: block; visibility: hidden; clear: both;}
+#wrap #about_me .intro_txt ul li ol {width: 100%;}
+#wrap #about_me .intro_txt ul li ol li {float: left;width: 95%; font-weight: 700;}
+#wrap #about_me .intro_txt ul li ol li span {float: left; width: 21%; display: block;}
+#wrap #about_me .intro_txt ul li ol li .bar {text-align: right;float: right;position: relative;background-color: #3f3f3f;width: 75%;}
+#wrap #about_me .intro_txt ul li ol li .bar mark {background-color: #f8c208;}
+#wrap #about_me .intro_txt ul li ol li .bar .in_box {position: absolute;top: 0;left: 0;background-color: white;width: 0%;height: 100%;transition: all 5s;}
+#wrap #about_me .intro_txt ul li ol li:first-of-type:hover .bar .in_box {width: 70%;}
+#wrap #about_me .intro_txt ul li ol li:nth-of-type(2):hover .bar .in_box,
+#wrap #about_me .intro_txt ul li ol li:nth-of-type(3):hover .bar .in_box,
+#wrap #about_me .intro_txt ul li ol li:nth-of-type(4):hover .bar .in_box {width: 80%;}
+#wrap #about_me .intro_txt ul li ol li:last-of-type:hover .bar .in_box {width: 60%;}
