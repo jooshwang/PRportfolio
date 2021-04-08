@@ -67,7 +67,7 @@ body {font-family: 'Roboto';}
 #wrap #about_me .intro_txt ul li ol li .bar {text-align: right;float: right;position: relative;background-color: #3f3f3f;width: 75%;}
 #wrap #about_me .intro_txt ul li ol li .bar mark {background-color: #f8c208;}
 #wrap #about_me .intro_txt ul li ol li .bar .in_box {position: absolute;top: 0;left: 0;background-color: white;width: 0%;height: 100%;transition: all 5s;
-    
+
     animation-duration: 3s;
 }
 #wrap #about_me .intro_txt ul li ol li:first-of-type .bar .in_box {width: 70%; animation-name: fadeIn2;}
